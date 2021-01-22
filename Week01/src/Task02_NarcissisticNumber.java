@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import static java.lang.Math.pow;
 
 /**
  * 计算 1000 以内的水仙花数有多少个。
@@ -24,7 +25,7 @@ public class Task02_NarcissisticNumber {
         int num1 = i/100;
         int num2 = (i%100) / 10;
         int num3 = (i % 100) % 10;
-        int result_num = (int) (Math.pow(num1, 3) + Math.pow(num2, 3) + Math.pow(num3, 3));
+        int result_num = (int) (pow(num1, 3) + pow(num2, 3) + pow(num3, 3));
         return result_num == i;
     }
 }
