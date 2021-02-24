@@ -15,8 +15,8 @@ public class Task03_GetNumFromString {
 
     /**
      * 用数组遍历逐个提取数字
-     * @param str
-     * @return ArrayList<Integer>
+     * @param str 输入的字符串
+     * @return 返回结果Integer数组列表
      */
     public static ArrayList<Integer> getNum(String str) {
         ArrayList<Integer> num_list = new ArrayList<>();
@@ -43,8 +43,8 @@ public class Task03_GetNumFromString {
 
     /**
      * 用正则划分字符串，然后将匹配结果放入ArrayList返回
-     * @param str
-     * @return ArrayList<Integer>
+     * @param str 输入的字符串
+     * @return 返回结果Integer数组列表
      */
     public static ArrayList<Integer> getNumRegex(String str) {
         // 匹配多个数字

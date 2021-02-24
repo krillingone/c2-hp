@@ -12,12 +12,11 @@ import java.util.Scanner;
 public class Task04_MoveZero2Tail {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String input;
 
         System.out.print("输入: ");
-        input = in.nextLine();
-        input = input.substring(1, input.length() - 1);
+        String input = in.nextLine();
 
+        input = input.substring(1, input.length() - 1);
         String[] strArr = input.split(",");
         int[] nums = new int[strArr.length];
 

@@ -1,22 +1,22 @@
 public class Task10_AlternatelyPrint {
-    public static void main(String[] args) throws InterruptedException {
-        new Thread(new TurnRunner(), "线程A").start();
-        new Thread(new TurnRunner(), "线程B").start();
+    public static void main(String[] args) {
+        TurnRunner tr = new TurnRunner();
+        new Thread(tr, "线程A").start();
+        new Thread(tr, "线程B").start();
     }
 
     static class TurnRunner implements Runnable {
-        private static int count = 0;
-        private static final Object lock = new Object();
+        private int count = 0;
 
         @Override
         public void run() {
             while (count <= 100) {
-                synchronized (lock) {
+                synchronized (this) {
                     System.out.println(Thread.currentThread().getName() + ": " + count++);
-                    lock.notify();
+                    this.notify();
                     try {
                         if (count <= 100) {
-                            lock.wait();
+                            this.wait();
                         }
                     } catch (InterruptedException e) {
                         e.printStackTrace();
