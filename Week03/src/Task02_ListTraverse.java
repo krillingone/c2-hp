@@ -32,10 +32,7 @@ class Employee {
     private String ManagerId;
 
     public Employee(int id, String name, int salary) {
-        Id = id;
-        Name = name;
-        Salary = salary;
-        ManagerId = "NULL";
+        this(id, name, salary, "NULL");
     }
 
     public Employee(int id, String name, int salary, String managerId) {
