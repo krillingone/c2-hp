@@ -1,0 +1,1 @@
+alter table ChooseBb add column `Bb4` varchar(20) not null default "系统测试值";
