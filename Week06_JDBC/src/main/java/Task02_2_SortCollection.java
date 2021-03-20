@@ -18,8 +18,7 @@ public class Task02_2_SortCollection {
             }
         }
     }
-
-
+    
 
     public static <T extends Comparable<T>> void insertSort(T[] list) {
         for (int i = 1; i < list.length; i++) {
