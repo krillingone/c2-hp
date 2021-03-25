@@ -13,7 +13,7 @@ import java.util.List;
 public class TotalTest {
 
     @Test
-    public void testFindAll() throws IOException {
+    public void testAll() throws IOException {
         AccountService service = new AccountService();
 
         service.insert(new Account("1", "Ash", 1000, new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis())));
