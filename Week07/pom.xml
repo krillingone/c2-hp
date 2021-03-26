@@ -9,8 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>MybatisLrn</module>
-        <module>JavaDataStucturesPrac</module>
+        <module>Mybatis</module>
     </modules>
 
 
