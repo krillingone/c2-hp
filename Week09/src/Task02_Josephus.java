@@ -3,7 +3,7 @@ import java.util.LinkedList;
 // 约瑟夫环问题：圆圈中最后剩下的数字
 public class Task02_Josephus {
     public static void main(String[] args) {
-        System.out.println(solution(10, 2));
+        System.out.println(solution(10, 17));
     }
 
     /**
@@ -16,7 +16,7 @@ public class Task02_Josephus {
         // init
         LinkedList<Integer> list = new LinkedList<>();
         for (int i = 0; i < n; i++) {
-            list.add(i + 1);
+            list.add(i);
         }
         while (list.size() > 1) {
             // 将头放到屁股，m次过后，要死的那个就在头了
