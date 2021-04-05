@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.krill.dao.UserMapper">
+    <!--用户注册：往里面加一个-->
+    <insert id="register" parameterType="user">
+        insert into user (username,mobile,password,name,birthday,sex,email,createTime,updateTime)
+        values (#{username},#{mobile},#{password},#{name},#{birthday},#{sex},#{email},#{createTime},#{updateTime})
+    </insert>
+
+    <!--用户登录：传入name、passwd看有没有一样的-->
+    <select id="login" resultType="user">
+        select * from user where mobile=#{mobile} and password=#{passwd}
+    </select>
+
+    <!--查询用户信息：select-->
+    <select id="findById" parameterType="int" resultType="user">
+        select * from user where id = #{uid}
+    </select>
+
+    <!-- 根据手机号查询用户 -->
+    <select id="findByMobile" parameterType="string" resultType="user">
+        select * from user where mobile=#{mobile}
+    </select>
+</mapper>
